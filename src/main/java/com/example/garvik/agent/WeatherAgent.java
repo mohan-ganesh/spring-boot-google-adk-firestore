@@ -15,7 +15,12 @@ import com.google.adk.tools.Annotations.Schema;
 import com.google.adk.tools.FunctionTool;
 
 /**
- * Weather agent
+ * 
+ * @author Mohan Ganesh
+ * @version 1.0
+ * @since 2026-01-09
+ * 
+ *        Weather agent
  */
 @Component
 public class WeatherAgent {
