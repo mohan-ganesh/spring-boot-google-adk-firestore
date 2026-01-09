@@ -1,0 +1,41 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      - "build"
+      - "-t"
+      - "$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME"
+      - '-f'
+      - 'Dockerfile'
+      - "."
+
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      - "push"
+      - "$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME"
+
+  - name: gcr.io/cloud-builders/gcloud
+    args:
+      - "run"
+      - "deploy"
+      - "$_SERVICE_NAME"
+      - "--image"
+      - "$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME"
+      - "--platform"
+      - "$_PLATFORM"
+      - "--region"
+      - "$_DEPLOY_REGION"
+      - "$_AUTH_OPTION"
+      - "--session-affinity"
+      - "--set-env-vars=GOOGLE_CLOUD_PROJECT=$PROJECT_ID,GOOGLE_CLOUD_LOCATION=us-central1,GOOGLE_GENAI_USE_VERTEXAI=true"
+
+
+
+images:
+  - "$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME"
+
+substitutions:
+  _SERVICE_NAME: "spring-boot-google-adk-firestore"
+  _GCR_HOSTNAME: "gcr.io"
+  _PLATFORM: "managed"
+  _DEPLOY_REGION: "us-central1"
+  _AUTH_OPTION: "--allow-unauthenticated"

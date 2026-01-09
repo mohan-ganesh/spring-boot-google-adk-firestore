@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.example</groupId>
+  <artifactId>spring-boot-google-adk-firestore</artifactId>
+  <version>1.0</version>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.2.0</version> <!-- Use a compatible Spring Boot version -->
+    <relativePath /> <!-- lookup parent from repository -->
+  </parent>
+
+
+  <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+    
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>   
+
+  <dependency>
+        <groupId>com.google.adk</groupId>
+        <artifactId>google-adk</artifactId>
+        <version>0.4.0</version>
+        <exclusions>
+            <!-- 1. Prevent the ADK from bringing in its own Spring version -->
+            <exclusion>
+                <groupId>org.springframework</groupId>
+                <artifactId>*</artifactId>
+            </exclusion>
+            <!-- 2. Explicitly remove the embedded dev server for Cloud Run -->
+            <exclusion>
+                <groupId>com.google.adk</groupId>
+                <artifactId>google-adk-dev</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.adk</groupId>
+      <artifactId>google-adk-firestore-session-service</artifactId>
+      <version>0.4.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.cloud</groupId>
+      <artifactId>google-cloud-firestore</artifactId>
+      <version>3.30.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-websocket</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+      <version>2.2.0</version>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+
+</project>
