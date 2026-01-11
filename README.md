@@ -137,7 +137,83 @@ Sample input:
 ``` 
 Sample output:
 ```json
-[Part{videoMetadata=Optional.empty, thought=Optional.empty, inlineData=Optional.empty, fileData=Optional.empty, thoughtSignature=Optional[[B@3d4ce52d], functionCall=Optional[FunctionCall{id=Optional[adk-2ea7aebe-a281-47a0-9c82-58eab74dd084], args=Optional[{city=New York}], name=Optional[getCurrentTime]}], codeExecutionResult=Optional.empty, executableCode=Optional.empty, functionResponse=Optional.empty, text=Optional.empty}][Part{videoMetadata=Optional.empty, thought=Optional.empty, inlineData=Optional.empty, fileData=Optional.empty, thoughtSignature=Optional.empty, functionCall=Optional.empty, codeExecutionResult=Optional.empty, executableCode=Optional.empty, functionResponse=Optional[FunctionResponse{willContinue=Optional.empty, scheduling=Optional.empty, parts=Optional.empty, id=Optional[adk-2ea7aebe-a281-47a0-9c82-58eab74dd084], name=Optional[getCurrentTime], response=Optional[{city=New York, forecast=The time is Fri Jan 09 17:26:29 EST 2026}]}], text=Optional.empty}][Part{videoMetadata=Optional.empty, thought=Optional.empty, inlineData=Optional.empty, fileData=Optional.empty, thoughtSignature=Optional.empty, functionCall=Optional.empty, codeExecutionResult=Optional.empty, executableCode=Optional.empty, functionResponse=Optional.empty, text=Optional[The time in New York is Fri Jan 09 17:26:29 EST 2026.]}]
+[
+   "Part"{
+      "videoMetadata=Optional.empty",
+      "thought=Optional.empty",
+      "inlineData=Optional.empty",
+      "fileData=Optional.empty",
+      "thoughtSignature=Optional"[
+         [
+            B@3d4ce52d
+         ],
+         "functionCall=Optional"[
+            "FunctionCall"{
+               "id=Optional"[
+                  adk-2ea7aebe-a281-47a0-9c82-58eab74dd084
+               ],
+               "args=Optional"[
+                  {
+                     "city=New York"
+                  }
+               ],
+               "name=Optional"[
+                  "getCurrentTime"
+               ]
+            }
+         ],
+         "codeExecutionResult=Optional.empty",
+         "executableCode=Optional.empty",
+         "functionResponse=Optional.empty",
+         "text=Optional.empty"
+      }
+   ][
+      "Part"{
+         "videoMetadata=Optional.empty",
+         "thought=Optional.empty",
+         "inlineData=Optional.empty",
+         "fileData=Optional.empty",
+         "thoughtSignature=Optional.empty",
+         "functionCall=Optional.empty",
+         "codeExecutionResult=Optional.empty",
+         "executableCode=Optional.empty",
+         "functionResponse=Optional"[
+            "FunctionResponse"{
+               "willContinue=Optional.empty",
+               "scheduling=Optional.empty",
+               "parts=Optional.empty",
+               "id=Optional"[
+                  adk-2ea7aebe-a281-47a0-9c82-58eab74dd084
+               ],
+               "name=Optional"[
+                  "getCurrentTime"
+               ],
+               "response=Optional"[
+                  {
+                     "city=New York",
+                     "forecast=The time is Fri Jan 09 17":"26":29 EST 2026
+                  }
+               ]
+            }
+         ],
+         "text=Optional.empty"
+      }
+   ][
+      "Part"{
+         "videoMetadata=Optional.empty",
+         "thought=Optional.empty",
+         "inlineData=Optional.empty",
+         "fileData=Optional.empty",
+         "thoughtSignature=Optional.empty",
+         "functionCall=Optional.empty",
+         "codeExecutionResult=Optional.empty",
+         "executableCode=Optional.empty",
+         "functionResponse=Optional.empty",
+         "text=Optional"[
+            "The time in New York is Fri Jan 09 17":"26":29 EST 2026.
+         ]
+      }
+   ]
 ```
 Screenshot:
 ![Screenshot](https://www.garvik.dev/assets/images/ai/spring-boot-firestore-adk-cloudrun-output.png)
