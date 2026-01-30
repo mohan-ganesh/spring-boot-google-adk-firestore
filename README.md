@@ -1,4 +1,4 @@
-# Spring Boot, Google  ADK Agent, Firestore & Cloud Run
+# Spring Boot, Google Agent Development Kit (ADK) Firestore & Google Cloud Run
 
 This project demonstrates how to build **stateful AI agents** and deploy a **Spring Boot** application that leverages the **Google Agent Development Kit (ADK)** and **Firestore** to create an AI-powered agent that is deployed to **Google Cloud Run** and also provides an API to interact with the agent while storing the session state in **Firestore** so that the agent can be used in a production or enterprise environment that can be scaled and managed.
 
