@@ -23,7 +23,7 @@
 
   <dependencyManagement>
     <dependencies>
-    
+
     </dependencies>
   </dependencyManagement>
 
@@ -31,30 +31,30 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>   
+    </dependency>
 
-  <dependency>
-        <groupId>com.google.adk</groupId>
-        <artifactId>google-adk</artifactId>
-        <version>0.5.0</version>
-        <exclusions>
-            <!-- 1. Prevent the ADK from bringing in its own Spring version -->
-            <exclusion>
-                <groupId>org.springframework</groupId>
-                <artifactId>*</artifactId>
-            </exclusion>
-            <!-- 2. Explicitly remove the embedded dev server for Cloud Run -->
-            <exclusion>
-                <groupId>com.google.adk</groupId>
-                <artifactId>google-adk-dev</artifactId>
-            </exclusion>
-        </exclusions>
+    <dependency>
+      <groupId>com.google.adk</groupId>
+      <artifactId>google-adk</artifactId>
+      <version>1.0.0-rc.1</version>
+      <exclusions>
+        <!-- 1. Prevent the ADK from bringing in its own Spring version -->
+        <exclusion>
+          <groupId>org.springframework</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+        <!-- 2. Explicitly remove the embedded dev server for Cloud Run -->
+        <exclusion>
+          <groupId>com.google.adk</groupId>
+          <artifactId>google-adk-dev</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <dependency>
       <groupId>com.google.adk</groupId>
       <artifactId>google-adk-firestore-session-service</artifactId>
-      <version>0.5.0</version>
+      <version>1.0.0-rc.1</version>
     </dependency>
 
     <dependency>
@@ -67,7 +67,7 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-websocket</artifactId>
     </dependency>
-    
+
     <dependency>
       <groupId>org.springdoc</groupId>
       <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
