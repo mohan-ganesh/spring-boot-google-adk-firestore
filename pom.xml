@@ -36,7 +36,7 @@
     <dependency>
       <groupId>com.google.adk</groupId>
       <artifactId>google-adk</artifactId>
-      <version>1.0.0-rc.1</version>
+      <version>1.0.0</version>
       <exclusions>
         <!-- 1. Prevent the ADK from bringing in its own Spring version -->
         <exclusion>
@@ -54,14 +54,9 @@
     <dependency>
       <groupId>com.google.adk</groupId>
       <artifactId>google-adk-firestore-session-service</artifactId>
-      <version>1.0.0-rc.1</version>
+      <version>1.0.0</version>
     </dependency>
 
-    <dependency>
-      <groupId>com.google.cloud</groupId>
-      <artifactId>google-cloud-firestore</artifactId>
-      <version>3.30.3</version>
-    </dependency>
 
     <dependency>
       <groupId>org.springframework.boot</groupId>
